@@ -12,6 +12,19 @@ pip install streamlit yfinance plotly pandas curl_cffi
 streamlit run app.py
 ```
 
+## GitHub
+
+Repositório: https://github.com/raul1791/b3-stocks-dashboard
+
+**Auto-push ativo:** a cada arquivo salvo ou editado pelo Claude Code, o hook `PostToolUse` executa `autopush.ps1` automaticamente — faz `git add -A`, commit com timestamp e `git push origin master`. Não é necessário fazer push manualmente.
+
+Para forçar push manual:
+```powershell
+powershell -ExecutionPolicy Bypass -File autopush.ps1
+```
+
+O hook está configurado em `.claude/settings.json`. Para desativar temporariamente, abra `/hooks` no Claude Code.
+
 ## Architecture
 
 A single-page Streamlit dashboard for Brazilian B3 stocks (PETR4, VALE3, ITUB4) in 2025, structured across three modules:
